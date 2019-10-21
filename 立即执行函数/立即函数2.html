@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //立即执行函数有两种写法
+      //1. (function(){}()) ; w3c推荐的
+      //2. (function(){})()  
+      //3.只有表达式才能被执行符号（）执行
+    function test(){
+         console.log("123")
+    }
+    test();
+
+    var test = function(){
+        console.log("123")
+    }();//被执行符号（）执行了就被释放了，window里就没有test了； test可有可无，所以就不写了
+
+    +function test(){
+        console.log("123")
+    }() //和上面的一样，+ - 
+
+    </script>
+</body>
+</html>

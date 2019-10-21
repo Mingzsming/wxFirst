@@ -1,0 +1,27 @@
+<html>
+    <script>
+         function Student(){
+             // 在new的时候，先在头部形成 var this={}；然后下面的一次添加到里面去
+            this.name = "baoma";
+          this.height = "1400";
+          this.lang = "4900";
+          this.weight = 1000;
+          this.run = function(){
+                return {} //捣乱 ，可以返回对象值。
+                // return 123; 返回原生值，如果是原始值都被系统忽略掉
+          }
+          //再用 return this  返回出去
+         }
+         var a1= new Student();
+
+  /*-------------------------*/
+  //模拟系统构造函数
+  function Person(name,height){
+      var that = {};
+      that.name = name;
+      that.height = height;
+      return that;
+  }
+  var person = Person("xiaoming","150cm");
+    </script>
+</html>

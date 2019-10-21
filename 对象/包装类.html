@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //原始值是独立的个体存在，属性和构造方法是对象里面才有的
+       var num = new Number('123');
+       console.log(num);
+       var str = new String('abcd');
+       var bol = new Boolean();
+
+       //包装类
+       var num1 = 4;
+       num1.len = 3;
+       //new Number(4).len = 3 ; delete
+       //
+       //new Number
+       
+       var str = "abcd";
+       str.length = 2;
+       //new string('abcd')。length 自带的给他的属性
+       console.log(str.length);
+    </script>
+</body>
+</html>

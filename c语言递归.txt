@@ -1,0 +1,23 @@
+#include <stdio.h>
+int fac(int n){         //这个句话的意思是声明一个名为fac的函数 ，传入函数的参数是n
+    int result;         //声明一个变量 result ，我还没有赋值给它
+    if(n<0){             //如果我传入的参数n<0 ;
+        printf("输出错误！\n");  //那么打印....
+        return 0;               //输出结果是0 ，下面的else if等都不执行了
+    }else if(n==0 ||n ==1){     //如果n=或者n=1；
+        result = 1 ;            //那么我给result 赋值为1； 这说明fac(0),fac(1)=1
+    }else{                      //否则
+        result = fac(n-1)*n; //result = fac(n-1)*n,  fac（n-1）是个函数，
+    }
+    return result;  //把函数fac（）的结果返还出去, 你可以试下return 1,结果是不论你传n等于多少，fac
+                                     （）都会等于1；
+}
+int main(){
+    int n=5;
+    print("%d的阶乘 = %d" , n ,factorial(n)); 
+    return 0;
+}
+所以fac（5）= fac（4）*5；
+fac（4）= fac（3）*4；
+fac（3）= fac（2）*3 ；
+fac（2）= fac（1）*2；  fac（1）= 1；所以 fac（5）= fac（1）*2*3*4*5；

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //系统构造函数创建对象
+      var obj = new Object();
+      obj.name = 'abc';  //为了和后端配合，php中是没有双引号的“”，一般写单引号
+      obj.sex = 'male'; 
+      console.log(obj);
+
+      //自定义构造方法
+      function Car(){
+          this.name = "baoma";
+          this.height = "1400";
+          this.lang = "4900";
+          this.weight = 1000;
+          this.run = function(){
+
+          }
+      }
+      var car = new Car();
+      car.name = "benchi";
+      var car1 = new Car();
+      car1.name ="fengtian";
+      console.log(car,car1); 
+    </script>
+    
+</body>
+</html>
